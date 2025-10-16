@@ -11,7 +11,7 @@
 }
 .typingHeading {
   font-family: "BBH Sans Bartle", sans-serif;
-  color: #000;
+  color: var(--heading-color);
   font-weight: 900;
   font-size: 6rem;
   line-height: 120px;
@@ -29,7 +29,7 @@
   gap: 40px;
 }
 .heroTextSection {
-  width: 70%;
+  width: 72%;
 }
 .heroText p {
   font-family: "Montserrat", sans-serif;

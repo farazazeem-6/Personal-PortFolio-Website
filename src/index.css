@@ -6,6 +6,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  background-color: rgb(238, 236, 236);
+body {
+  background-color: var(--bg-color);
+}
+.light {
+  --bg-color: rgb(238, 236, 236);
+  --heading-color: black;
+  --p-color: rgb(139, 139, 139);
+}
+
+.dark {
+  --bg-color: rgb(7, 7, 7);
+  --heading-color: rgb(255, 255, 255);
+  --p-color: rgb(139, 139, 139);
 }
