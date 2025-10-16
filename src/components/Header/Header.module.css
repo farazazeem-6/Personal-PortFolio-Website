@@ -1,0 +1,34 @@
+* {
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  padding: 30px 5%;
+}
+
+.logo {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 2rem;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.navbar ul li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.toggleBtn {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 6px 9px 8px 9px;
+  border-radius: 10px;
+}
