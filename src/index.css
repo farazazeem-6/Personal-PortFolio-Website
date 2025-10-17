@@ -6,8 +6,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: var(--bg-color);
+  font-family: "Montserrat", sans-serif;
 }
 .light {
   --bg-color: rgb(238, 236, 236);

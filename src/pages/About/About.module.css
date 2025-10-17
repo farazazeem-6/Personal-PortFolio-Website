@@ -1,3 +1,40 @@
-.aboutContainer{
-    padding: 30px 5% 20px;
+.aboutContainer {
+  padding: 30px 15% 20px;
+  margin-top: 150px;
+}
+.aboutData {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.aboutImg {
+  width: 50%;
+}
+.aboutImg img {
+  width: 500px;
+  border-radius: 20px;
+}
+.abouttext {
+  width: 50%;
+}
+.abouttext p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  color: rgb(139, 139, 139);
+  letter-spacing: 3px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.abouttext h4 {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(95, 85, 85);
+  margin-bottom: 20px;
+}
+.aboutContainer h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-align: center;
+    color: var(--heading-color);
+
 }

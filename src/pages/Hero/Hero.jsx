@@ -6,9 +6,12 @@ function Hero() {
   return (
     <div className={styles.heroContainer}>
       <div className={styles.heroTextSection}>
-        <TypingText className={styles.typingHeading}>
-          Hello,I'm Faraz Azeem!
+        <TypingText className={styles.typingHeading}>Faraz</TypingText>
+        <TypingText className={styles.typingHeading}>Azeem!</TypingText>
+        <TypingText className={styles.typingBody1}>
+          ------A Front End
         </TypingText>
+        <TypingText className={styles.typingBody2}>Developer</TypingText>
       </div>
       <div className={styles.heroImgSection}>
         <div className={styles.heroImg}>
@@ -16,8 +19,7 @@ function Hero() {
         </div>
         <div className={styles.heroText}>
           <p>
-            I'm a front-end developer who blends clean code with thoughtful
-            design to build fast, responsive web interfaces. With a strong grip
+            With a strong grip
             on React, Tailwind, and modern tooling, I turn ideas into smooth,
             scalable experiences. I love debugging, refining UI flows, and
             experimenting with animations that bring interfaces to life.
