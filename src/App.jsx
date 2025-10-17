@@ -1,4 +1,10 @@
-import React, { createContext, Fragment, useEffect, useState } from "react";
+import React, {
+  createContext,
+  Fragment,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Header from "./components/Header/Header";
 import Hero from "./pages/Hero/Hero";
 import LocomotiveScroll from "locomotive-scroll";
@@ -13,7 +19,7 @@ function App() {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   }
 
-    useEffect(() => {
+  useEffect(() => {
     document.body.classList.remove("light", "dark");
     document.body.classList.add(theme);
   }, [theme]);

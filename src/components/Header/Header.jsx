@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styles from "../Header/Header.module.css";
 import SunnyIcon from "@mui/icons-material/Sunny";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
+import CategoryIcon from '@mui/icons-material/Category';
 import { ThemeContext } from "../../App";
 
 function Header() {
@@ -10,7 +11,9 @@ function Header() {
 
   return (
     <div className={styles.header}>
-      <div className={styles.logo}>FARAZ .</div>
+      <div className={styles.logo}>
+        <CategoryIcon sx={{fontSize:'3rem'}} fontSize="large"/>
+      </div>
       <div className={styles.navbar}>
         <ul>
           <li>HOME</li>

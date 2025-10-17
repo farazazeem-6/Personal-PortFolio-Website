@@ -5,16 +5,26 @@
 .heroContainer {
   display: flex;
   align-items: center;
-  padding: 30px 5% 20px;
+  padding: 30px 15% 20px;
   justify-content: space-between;
-  gap: 40px;
+  gap: 10px;
 }
 .typingHeading {
   font-family: "BBH Sans Bartle", sans-serif;
   color: var(--heading-color);
   font-weight: 900;
-  font-size: 6rem;
-  line-height: 120px;
+  font-size: 4rem;
+  /* line-height: 120px; */
+}
+.typingBody1 {
+  font-size: 2rem;
+  color: var(--heading-color);
+  margin-top: 60px;
+}
+.typingBody2 {
+  font-size: 2rem;
+  color: var(--heading-color);
+  margin-top: 10px;
 }
 .heroImg img {
   display: flex;
@@ -29,7 +39,9 @@
   gap: 40px;
 }
 .heroTextSection {
-  width: 72%;
+  width: 71%;
+  display: flex;
+  flex-direction: column;
 }
 .heroText p {
   font-family: "Montserrat", sans-serif;
@@ -37,4 +49,5 @@
   color: rgb(139, 139, 139);
   letter-spacing: 3px;
   font-weight: 400;
+  line-height: 25px;
 }
