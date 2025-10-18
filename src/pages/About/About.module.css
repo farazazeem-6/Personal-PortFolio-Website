@@ -30,11 +30,11 @@
   font-family: "Montserrat", sans-serif;
   color: rgb(95, 85, 85);
   margin-bottom: 20px;
+  font-weight: 600;
 }
 .aboutContainer h1 {
   font-size: 3rem;
   margin-bottom: 50px;
   text-align: center;
-    color: var(--heading-color);
-
+  color: var(--heading-color);
 }

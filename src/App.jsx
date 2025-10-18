@@ -24,12 +24,29 @@ function App() {
     document.body.classList.add(theme);
   }, [theme]);
 
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      lerp: 0.1,
+      multiplier: 1,
+      class: "is-inview",
+    });
+
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
   return (
     <div className={theme}>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <Header />
-        <Hero />
-        <About />
+        <div data-scroll-container ref={scrollRef}>
+          <Header />
+          <Hero />
+          <About />
+        </div>
       </ThemeContext.Provider>
     </div>
   );
