@@ -3,6 +3,8 @@ import styles from "../About/About.module.css";
 import aboutImg1 from "../../utils/images/about1.jpg";
 import aboutImg2 from "../../utils/images/about2.jpg";
 import aboutImg3 from "../../utils/images/about3.jpg";
+import {Button} from '@mui/material'
+import SendIcon from '@mui/icons-material/Send';
 
 function About() {
   return (
@@ -21,6 +23,11 @@ function About() {
             Tailwind CSS, and a growing toolkit of UI libraries and animation
             frameworks
           </p>
+        </div>
+         <div className="resumeBtn">
+          <Button variant="contained" endIcon={<SendIcon/>}>
+            Download CV
+          </Button>
         </div>
       </div>
     </div>
