@@ -38,3 +38,6 @@
   text-align: center;
   color: var(--heading-color);
 }
+.resumeBtn{
+  margin-top: 50px;
+}
