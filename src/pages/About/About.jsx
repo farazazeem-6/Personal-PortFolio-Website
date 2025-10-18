@@ -7,7 +7,7 @@ import aboutImg3 from "../../utils/images/about3.jpg";
 function About() {
   return (
     <div className={styles.aboutContainer}>
-      <h1 >About Me</h1>
+      <h1 data-scroll data-scroll-direction="horizontal">About Me</h1>
       <div className={styles.aboutData}>
         <div className={styles.aboutImg}>
           <img src={aboutImg1} alt="" />
@@ -19,11 +19,7 @@ function About() {
             intersection of clean code and creative design. I specialize in
             building modern, responsive web applications using React, Vite,
             Tailwind CSS, and a growing toolkit of UI libraries and animation
-            frameworks.I’m passionate about crafting distraction-free
-            interfaces, integrating secure and scalable architecture, and
-            constantly leveling up my skills — from mastering bundlers like
-            Parcel and Babel to exploring ethical hacking and system-level
-            tools.
+            frameworks
           </p>
         </div>
       </div>

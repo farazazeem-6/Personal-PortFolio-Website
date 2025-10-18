@@ -25,6 +25,9 @@ function Hero() {
             experimenting with animations that bring interfaces to life.
           </p>
         </div>
+        <div className="resumeBtn">
+          
+        </div>
       </div>
     </div>
   );
