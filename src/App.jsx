@@ -10,6 +10,7 @@ import Hero from "./pages/Hero/Hero";
 import LocomotiveScroll from "locomotive-scroll";
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
+import Project from "./pages/Project/Project";
 const locomotiveScroll = new LocomotiveScroll();
 
 const ThemeContext = createContext();
@@ -48,6 +49,7 @@ function App() {
           <Hero />
           <About />
           <Skills/>
+          <Project/>
         </div>
       </ThemeContext.Provider>
     </div>

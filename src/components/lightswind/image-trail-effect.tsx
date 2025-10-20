@@ -88,7 +88,7 @@ export default function ImageTrailEffect({
       onTouchMove={(e) => handleMouseMove(e.touches[0])}
       ref={wrapperRef}
       className={cn(
-        `grid place-content-center h-[600px] w-full bg-background  text-foreground
+        `grid place-content-center h-[500px] w-full bg-background  text-foreground
         relative overflow-hidden rounded-lg`,
         containerClassName
       )}
