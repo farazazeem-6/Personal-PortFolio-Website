@@ -17,7 +17,6 @@ function Card({ img, link }) {
             fontSize: "18px",
           }}
           variant="outlined"
-          
           endIcon={<CallMadeIcon />}
         >
           Go to code
