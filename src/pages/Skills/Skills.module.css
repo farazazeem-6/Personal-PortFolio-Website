@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 100px;
 }
 .skillOuter {
   margin-top: 150px;
@@ -13,6 +14,42 @@
 h1 {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   color: var(--heading-color);
+}
+.skillsIcons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 20px;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 350px;
+  height: 100%;
+  margin-bottom: 40px;
+  padding: 20px;
+  /* border: 1px solid black; */
+}
+.skill i {
+  font-size: 5rem;
+  /* margin-bottom: 10px; */
+  color: var(--heading-color);
+  /* border: 1px solid black; */
+  padding: 10px 30px;
+}
+.skill p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: rgb(139, 139, 139);
+  padding: 10px;
+  /* border: 1px solid black; */
+  text-align: center;
+  max-width: 400px;
+  line-height: 1.5;
+  margin: 0 auto;
 }
