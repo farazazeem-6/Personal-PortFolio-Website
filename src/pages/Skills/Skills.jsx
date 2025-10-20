@@ -35,8 +35,8 @@ function Skills() {
                 of customizing themes and styling for a unique look.
               </p>
             </div>
-            <div  className={styles.skill}>
-             <i class="fa-brands fa-js"></i>
+            <div className={styles.skill}>
+              <i class="fa-brands fa-js"></i>
               <p>
                 Proficient in JavaScript to make websites interactive and
                 dynamic. I handle DOM manipulation, events, and API integration
