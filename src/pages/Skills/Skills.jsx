@@ -9,7 +9,7 @@ function Skills() {
         <div className={styles.skillTextSection}>
           <div className={styles.skillsIcons}>
             <div className={styles.skill}>
-              <i class="fa-brands fa-html5"></i>
+              <i className="fa-brands fa-html5"></i>
               <p>
                 Proficient in semantic HTML5, writing clean, accessible and
                 SEO-friendly markup. I structure responsive page layouts and
@@ -18,7 +18,7 @@ function Skills() {
               </p>
             </div>
             <div className={styles.skill}>
-              <i class="fa-brands fa-css"></i>
+              <i className="fa-brands fa-css"></i>
               <p>
                 Skilled in modern CSS3, creating clean and responsive UI
                 designs. I use Flexbox, Grid, animations, and transitions for
@@ -27,7 +27,7 @@ function Skills() {
               </p>
             </div>
             <div className={styles.skill}>
-              <i class="fa-brands fa-bootstrap"></i>
+              <i className="fa-brands fa-bootstrap"></i>
               <p>
                 Experienced in Bootstrap for creating clean, responsive, and
                 mobile-first designs. I use its grid system, prebuilt
@@ -36,7 +36,7 @@ function Skills() {
               </p>
             </div>
             <div className={styles.skill}>
-              <i class="fa-brands fa-js"></i>
+              <i className="fa-brands fa-js"></i>
               <p>
                 Proficient in JavaScript to make websites interactive and
                 dynamic. I handle DOM manipulation, events, and API integration
@@ -45,7 +45,7 @@ function Skills() {
               </p>
             </div>
             <div className={styles.skill}>
-              <i class="fa-brands fa-react"></i>
+              <i className="fa-brands fa-react"></i>
               <p>
                 Proficient in React for creating fast and scalable web
                 applications. I use components, hooks, and state management to
@@ -54,7 +54,7 @@ function Skills() {
               </p>
             </div>
             <div className={styles.skill}>
-              <i class="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github"></i>
               <p>
                 Proficient in GitHub for version control and team collaboration.
                 I work with repositories, branches, commits, and pull requests.

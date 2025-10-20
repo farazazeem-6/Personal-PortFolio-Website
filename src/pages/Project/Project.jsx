@@ -36,12 +36,34 @@ function Project() {
       />
 
       <div className={styles.projectContainer}>
-        <Card img={'./src/utils/images/project120.png'}/>
-        <Card img={'./src/utils/images/project7.png'}/>
-        <Card img={'./src/utils/images/project117.png'}/>
-        <Card img={'./src/utils/images/project115.png'}/>
-        <Card img={'./src/utils/images/project116.png'}/>
-        <Card img={'./src/utils/images/project124.png'}/>
+        <Card
+          link={"https://github.com/farazazeem-6/FoodPandaClone"}
+          img={"./src/utils/images/project120.png"}
+        />
+        <Card
+          link={
+            "https://github.com/farazazeem-6/Responsive-Food-Website-with-HTML-and-CSS"
+          }
+          img={"./src/utils/images/project7.png"}
+        />
+        <Card
+          link={"https://github.com/farazazeem-6/Movie-App-Using-React"}
+          img={"./src/utils/images/project117.png"}
+        />
+        <Card
+          link={"https://github.com/farazazeem-6/Quiz-React-App-Using-APIs"}
+          img={"./src/utils/images/project115.png"}
+        />
+        <Card
+          link={"https://github.com/farazazeem-6/Brand-Page-UI-Using-React-19"}
+          img={"./src/utils/images/project116.png"}
+        />
+        <Card
+          link={
+            "https://github.com/farazazeem-6/Building-Baloch-Bus-Service-Website-Clone"
+          }
+          img={"./src/utils/images/project124.png"}
+        />
       </div>
     </div>
   );

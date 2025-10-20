@@ -18,14 +18,15 @@ function About() {
         </div>
 
         <div className={styles.abouttext}>
-          <p>
+          <div>
             <h4>My Introduction</h4>
+            <p>
             Hi, I’m Faraz — a front-end developer who thrives at the
             intersection of clean code and creative design. I specialize in
             building modern, responsive web applications using React, Vite,
             Tailwind CSS, and a growing toolkit of UI libraries and animation
-            frameworks
-          </p>
+            frameworks.</p>
+          </div>
           <div className={styles.resumeBtn}>
             <Button
             className={styles.resumeBtnStyle}
