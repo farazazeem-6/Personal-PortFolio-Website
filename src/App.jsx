@@ -11,6 +11,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
 import Project from "./pages/Project/Project";
+import Contact from "./pages/Contact/Contact";
 const locomotiveScroll = new LocomotiveScroll();
 
 const ThemeContext = createContext();
@@ -50,6 +51,7 @@ function App() {
           <About />
           <Skills/>
           <Project/>
+          <Contact/>
         </div>
       </ThemeContext.Provider>
     </div>

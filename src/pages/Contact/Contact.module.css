@@ -1,0 +1,40 @@
+.contactOuter {
+  padding: 40px 15%;
+}
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 100px;
+}
+.contactContainer input {
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px 8px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.contactContainer input:focus {
+  outline: 2px solid #ccc;
+}
+.contactContainer input::placeholder {
+  font-size: 18px;
+  font-weight: 600;
+}
+.contactContainer textarea {
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px 8px;
+  font-size: 1.2rem;
+
+  border-radius: 10px;
+}
+.contactContainer textarea:focus {
+  outline: 2px solid #ccc;
+}
+.contactContainer textarea::placeholder {
+  font-size: 18px;
+  font-weight: 600;
+}
