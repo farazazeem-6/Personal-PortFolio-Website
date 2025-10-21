@@ -16,6 +16,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex-shrink: 0;
 }
 
 .typingHeading {
@@ -26,20 +27,22 @@
   line-height: 1.2;
   word-wrap: break-word;
 }
+
 .typingHeading2 {
   font-family: "BBH Sans Bartle", sans-serif;
   color: var(--heading-color);
   font-weight: 900;
   font-size: clamp(1.2rem, 4vw, 2rem);
   line-height: 1.2;
-  /* word-wrap: break-word; */
 }
+
 .heroImgSection {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+  flex-shrink: 0;
 }
 
 .heroImg {
@@ -64,27 +67,45 @@
   line-height: 1.6;
 }
 
-/* Tablet screens */
-@media screen and (max-width: 1024px) {
+/* Laptop and small desktop screens */
+@media screen and (max-width: 1200px) {
   .heroContainer {
-    padding: 60px 10% 40px;
+    padding: 60px 8% 40px;
     gap: 40px;
   }
 
   .typingHeading {
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
   }
+
   .typingHeading2 {
-    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(1.1rem, 3vw, 1.8rem);
+  }
+}
+
+/* Tablet screens - critical zone for overlap */
+@media screen and (max-width: 900px) {
+  .heroContainer {
+    padding: 50px 6% 40px;
+    gap: 30px;
+  }
+
+  .typingHeading {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+  }
+
+  .typingHeading2 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
   }
 
   .heroText p {
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
     letter-spacing: 1.5px;
     line-height: 1.5;
   }
 }
 
-/* Small tablets and large phones */
+/* Small tablets and large phones - switch to vertical */
 @media screen and (max-width: 768px) {
   .heroContainer {
     flex-direction: column;
@@ -95,22 +116,27 @@
   .heroTextSection {
     width: 100%;
     text-align: center;
-    order: 2;
+    order: 1;
   }
 
   .heroImgSection {
     width: 100%;
-    order: 1;
+    order: 2;
     gap: 30px;
   }
 
   .typingHeading {
-    font-size: clamp(1.5rem, 5.5vw, 2rem);
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .typingHeading2 {
+    font-size: clamp(1.3rem, 4.5vw, 1.8rem);
   }
 
   .heroText p {
     text-align: center;
     letter-spacing: 1px;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
   }
 }
 
@@ -118,7 +144,7 @@
 @media screen and (max-width: 480px) {
   .heroContainer {
     padding: 30px 5%;
-    gap: 40px;
+    gap: 35px;
   }
 
   .heroTextSection {
@@ -126,7 +152,11 @@
   }
 
   .typingHeading {
-    font-size: clamp(1.4rem, 7vw, 1.8rem);
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  .typingHeading2 {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
   }
 
   .heroImgSection {
@@ -138,11 +168,6 @@
     letter-spacing: 0.5px;
     line-height: 1.5;
   }
-
-  .typingBody1,
-  .typingBody2 {
-    margin-top: 20px;
-  }
 }
 
 /* Extra small screens */
@@ -152,7 +177,11 @@
   }
 
   .typingHeading {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+
+  .typingHeading2 {
+    font-size: 1rem;
   }
 
   .heroText p {

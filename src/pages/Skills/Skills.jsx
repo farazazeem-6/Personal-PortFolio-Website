@@ -6,7 +6,6 @@ function Skills(props,ref) {
     <div ref={ref} className={styles.skillOuter}>
       <h1>Personal Skills</h1>
       <div className={styles.skillsContainer}>
-        <div className={styles.skillTextSection}>
           <div className={styles.skillsIcons}>
             <div className={styles.skill}>
               <i className="fa-brands fa-html5"></i>
@@ -71,7 +70,6 @@ function Skills(props,ref) {
           />
         </div> */}
       </div>
-    </div>
   );
 }
 

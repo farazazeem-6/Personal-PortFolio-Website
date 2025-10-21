@@ -1,6 +1,7 @@
 * {
   user-select: none;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -17,13 +18,19 @@
 .logo {
   font-family: "BBH Sans Bartle", sans-serif;
   color: var(--heading-color);
+  z-index: 101;
 }
+
 .navbar ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
 .navbar ul li {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
@@ -32,12 +39,115 @@
   transition: all 0.3s ease;
   color: var(--heading-color);
 }
+
 .navbar ul li:hover {
   color: rgb(139, 139, 139);
 }
+
+.themeBtn {
+  display: block;
+}
+
 .toggleBtn {
   border: 1px solid #ccc;
   cursor: pointer;
   padding: 6px 9px 8px 9px;
   border-radius: 10px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburgerBtn {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 6px 9px;
+  border-radius: 10px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--heading-color);
+  z-index: 101;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100vh;
+  background: var(--bg-color, #fff);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 30px 30px 30px;
+}
+
+.mobileMenu.active {
+  left: 0;
+}
+
+.mobileMenu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobileMenu ul li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 560;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--heading-color);
+  padding: 10px 0;
+}
+
+.mobileMenu ul li:hover {
+  color: rgb(139, 139, 139);
+  transform: translateX(5px);
+}
+
+.mobileThemeBtn {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar,
+  .themeBtn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header {
+    padding: 20px 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mobileMenu {
+    width: 80%;
+  }
+
+  .navbar ul li,
+  .mobileMenu ul li {
+    font-size: 1.1rem;
+  }
 }
