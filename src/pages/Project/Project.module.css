@@ -3,11 +3,13 @@
 }
 .projectContainer {
   margin-top: 50px;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;*/
-  gap: 30px; 
+  gap: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-items: center;
+}
+@media (max-width: 600px) {
+  .projectContainer {
+    grid-template-columns: 1fr;
+  }
 }

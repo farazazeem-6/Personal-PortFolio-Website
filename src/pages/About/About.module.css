@@ -2,42 +2,242 @@
   padding: 30px 15% 20px;
   margin-top: 150px;
 }
+
 .aboutData {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 50px;
 }
+
 .aboutImg {
   width: 50%;
+  flex-shrink: 0;
 }
+
 .aboutImg img {
-  width: 500px;
-  /* border-radius: 20px; */
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
 }
+
 .abouttext {
   width: 50%;
+  flex-shrink: 0;
 }
+
 .abouttext p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
   color: rgb(139, 139, 139);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 1.8;
 }
+
 .abouttext h4 {
   font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   color: rgb(95, 85, 85);
   margin-bottom: 20px;
   font-weight: 600;
 }
+
 .aboutContainer h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 50px;
   text-align: center;
   color: var(--heading-color);
+  font-weight: 900;
 }
-.resumeBtn{
+
+.resumeBtn {
   margin-top: 50px;
+}
+
+.resumeBtn a {
+  display: inline-block;
+}
+
+.resumeBtnStyle {
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+  .aboutContainer {
+    padding: 30px 10% 20px;
+    margin-top: 120px;
+  }
+
+  .aboutData {
+    gap: 40px;
+  }
+
+  .aboutImg img {
+    max-width: 400px;
+  }
+
+  .abouttext p {
+    letter-spacing: 1.5px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .aboutContainer {
+    padding: 30px 8% 20px;
+    margin-top: 100px;
+  }
+
+  .aboutData {
+    gap: 30px;
+  }
+
+  .aboutImg img {
+    max-width: 350px;
+  }
+
+  .abouttext p {
+    font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+    letter-spacing: 1.2px;
+    line-height: 1.7;
+  }
+
+  .abouttext h4 {
+    font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+    margin-bottom: 15px;
+  }
+
+  .aboutContainer h1 {
+    margin-bottom: 40px;
+  }
+
+  .resumeBtn {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutContainer {
+    padding: 30px 8% 40px;
+    margin-top: 80px;
+  }
+
+  .aboutData {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .aboutImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutImg img {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .abouttext {
+    width: 100%;
+    text-align: center;
+  }
+
+  .abouttext p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    letter-spacing: 1px;
+    line-height: 1.7;
+  }
+
+  .abouttext h4 {
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+  }
+
+  .aboutContainer h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    margin-bottom: 35px;
+  }
+
+  .resumeBtn {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .resumeBtn a {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .resumeBtn button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .aboutContainer {
+    padding: 25px 5% 30px;
+    margin-top: 60px;
+  }
+
+  .aboutData {
+    gap: 30px;
+  }
+
+  .aboutImg img {
+    max-width: 100%;
+  }
+
+  .abouttext p {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+  }
+
+  .abouttext h4 {
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    margin-bottom: 12px;
+  }
+
+  .aboutContainer h1 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    margin-bottom: 30px;
+  }
+
+  .resumeBtn {
+    margin-top: 30px;
+  }
+
+  .resumeBtn button {
+    font-size: 1rem !important;
+    padding: 8px 16px !important;
+    letter-spacing: 1px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .aboutContainer {
+    padding: 20px 5% 25px;
+    margin-top: 50px;
+  }
+
+  .aboutContainer h1 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .abouttext h4 {
+    font-size: 1.1rem;
+  }
+
+  .abouttext p {
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+  }
+
+  .resumeBtn button {
+    font-size: 0.9rem !important;
+    padding: 7px 14px !important;
+  }
 }
