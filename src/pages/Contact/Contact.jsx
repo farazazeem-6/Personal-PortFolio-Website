@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, forwardRef } from "react";
 import styles from "../../pages/Contact/Contact.module.css";
 import { Button } from "@mui/material";
 import emailjs from "emailjs-com";
 import Notification from "../../components/Toast_Notification/Notification";
 import { rgba } from "framer-motion";
 
-function Contact() {
+function Contact(props, ref) {
   const form = useRef();
   const [isSending, setIsSending] = useState(false);
   const [result, setResult] = useState("");
@@ -50,7 +50,7 @@ function Contact() {
       );
   };
   return (
-    <div className={styles.contactOuter}>
+    <div ref={ref} className={styles.contactOuter}>
       <h1>Contact Me</h1>
       <div className={styles.contactContainer}>
         <form ref={form} onSubmit={sendEmail} className="contact-form">
@@ -85,4 +85,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default React.forwardRef(Contact);

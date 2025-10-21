@@ -1,9 +1,9 @@
-import React from "react";
+import React,{forwardRef} from "react";
 import styles from "../../pages/Skills/Skills.module.css";
 
-function Skills() {
+function Skills(props,ref) {
   return (
-    <div className={styles.skillOuter}>
+    <div ref={ref} className={styles.skillOuter}>
       <h1>Personal Skills</h1>
       <div className={styles.skillsContainer}>
         <div className={styles.skillTextSection}>
@@ -75,4 +75,4 @@ function Skills() {
   );
 }
 
-export default Skills;
+export default React.forwardRef(Skills);

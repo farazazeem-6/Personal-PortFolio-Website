@@ -1,23 +1,15 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styles from "../Hero/Hero.module.css";
-import { TypingText } from "../../components/lightswind/TypeText";
+// import { TypingText } from "../../components/lightswind/TypeText";
 import heroImg from "../../utils/images/hero.jpg";
 
 
-
-
-
-
-function Hero() {
+function Hero(props,ref) {
   return (
-    <div className={styles.heroContainer}>
+    <div ref={ref} className={styles.heroContainer}>
       <div className={styles.heroTextSection}>
-        <TypingText className={styles.typingHeading}>Faraz</TypingText>
-        <TypingText className={styles.typingHeading}>Azeem!</TypingText>
-        <TypingText className={styles.typingBody1}>
-          ------A Front End
-        </TypingText>
-        <TypingText className={styles.typingBody2}>Developer</TypingText>
+        <h1 className={styles.typingHeading}>FARAZ AZEEM!</h1>
+        <h1 className={styles.typingHeading2}>A FRONT END DEVELOPER</h1>
       </div>
       <div className={styles.heroImgSection}>
         <div className={styles.heroImg}>
@@ -37,4 +29,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default React.forwardRef(Hero);

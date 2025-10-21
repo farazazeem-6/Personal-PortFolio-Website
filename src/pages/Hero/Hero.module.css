@@ -2,34 +2,37 @@
   user-select: none;
   font-family: "BBH Sans Bartle", sans-serif;
 }
+
 .heroContainer {
   display: flex;
   align-items: center;
-  padding: 30px 15% 20px;
+  padding: 80px 15% 40px;
   justify-content: space-between;
-  gap: 10px;
+  gap: 50px;
 }
+
+.heroTextSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .typingHeading {
   font-family: "BBH Sans Bartle", sans-serif;
   color: var(--heading-color);
   font-weight: 900;
-  font-size: 4rem;
-  /* line-height: 120px; */
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  word-wrap: break-word;
 }
-.typingBody1 {
-  font-size: 2rem;
+.typingHeading2 {
+  font-family: "BBH Sans Bartle", sans-serif;
   color: var(--heading-color);
-  margin-top: 60px;
-}
-.typingBody2 {
-  font-size: 2rem;
-  color: var(--heading-color);
-  margin-top: 10px;
-}
-.heroImg img {
-  display: flex;
-  align-items: center;
-  width: 100%;
+  font-weight: 900;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  line-height: 1.2;
+  /* word-wrap: break-word; */
 }
 .heroImgSection {
   width: 50%;
@@ -38,16 +41,121 @@
   justify-content: center;
   gap: 40px;
 }
-.heroTextSection {
-  width: 71%;
-  display: flex;
-  flex-direction: column;
+
+.heroImg {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
 }
+
+.heroImg img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .heroText p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
   color: rgb(139, 139, 139);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 1.6;
+}
+
+/* Tablet screens */
+@media screen and (max-width: 1024px) {
+  .heroContainer {
+    padding: 60px 10% 40px;
+    gap: 40px;
+  }
+
+  .typingHeading {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+  }
+  .typingHeading2 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+  }
+
+  .heroText p {
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+  }
+}
+
+/* Small tablets and large phones */
+@media screen and (max-width: 768px) {
+  .heroContainer {
+    flex-direction: column;
+    padding: 40px 8% 40px;
+    gap: 40px;
+  }
+
+  .heroTextSection {
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+
+  .heroImgSection {
+    width: 100%;
+    order: 1;
+    gap: 30px;
+  }
+
+  .typingHeading {
+    font-size: clamp(1.5rem, 5.5vw, 2rem);
+  }
+
+  .heroText p {
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 480px) {
+  .heroContainer {
+    padding: 30px 5%;
+    gap: 40px;
+  }
+
+  .heroTextSection {
+    gap: 15px;
+  }
+
+  .typingHeading {
+    font-size: clamp(1.4rem, 7vw, 1.8rem);
+  }
+
+  .heroImgSection {
+    gap: 25px;
+  }
+
+  .heroText p {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+  }
+
+  .typingBody1,
+  .typingBody2 {
+    margin-top: 20px;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 360px) {
+  .heroContainer {
+    padding: 20px 5%;
+  }
+
+  .typingHeading {
+    font-size: 1.3rem;
+  }
+
+  .heroText p {
+    font-size: 0.9rem;
+  }
 }
