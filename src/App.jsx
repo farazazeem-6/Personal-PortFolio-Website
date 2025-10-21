@@ -22,6 +22,7 @@ function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+  const skillsRef = useRef(null);
 
   const [theme, setTheme] = useState("light");
   function toggleTheme() {
@@ -52,10 +53,10 @@ function App() {
     <div className={theme}>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <div data-scroll-container ref={scrollRef}>
-          <Header scrollRefs={{ homeRef, aboutRef, projectsRef, contactRef }} />
+          <Header scrollRefs={{ homeRef, aboutRef, projectsRef, contactRef,skillsRef }} />
           <Hero ref={homeRef} />
           <About ref={aboutRef} />
-          <Skills />
+          <Skills ref={skillsRef} />
           <Project ref={projectsRef} />
           <Contact ref={contactRef} />
           <Footer />

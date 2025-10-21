@@ -4,16 +4,12 @@ import styles from "../Hero/Hero.module.css";
 import heroImg from "../../utils/images/hero.jpg";
 
 
-
-
-
-
 function Hero(props,ref) {
   return (
     <div ref={ref} className={styles.heroContainer}>
       <div className={styles.heroTextSection}>
-        <h1>FARAZ AZEEM!</h1>
-        <h1>A FRONT END DEVELOPER</h1>
+        <h1 className={styles.typingHeading}>FARAZ AZEEM!</h1>
+        <h1 className={styles.typingHeading2}>A FRONT END DEVELOPER</h1>
       </div>
       <div className={styles.heroImgSection}>
         <div className={styles.heroImg}>

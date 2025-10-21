@@ -7,7 +7,7 @@ import { ThemeContext } from "../../App";
 import { Link } from "@mui/material";
 
 function Header({ scrollRefs }) {
-  const { homeRef, aboutRef, projectsRef, contactRef } = scrollRefs;
+  const { homeRef, aboutRef, projectsRef, contactRef,skillsRef } = scrollRefs;
 
   const { theme, toggleTheme } = useContext(ThemeContext);
   // console.log(theme);
@@ -26,6 +26,7 @@ function Header({ scrollRefs }) {
           {/* <Link onClick={()=>scrollTo(homeref)}>Home</Link> */}
           <li onClick={() => handleScroll(homeRef)}>HOME</li>
           <li onClick={() => handleScroll(aboutRef)}>ABOUT</li>
+          <li onClick={() => handleScroll(skillsRef)}>SKILLS</li>
           <li onClick={() => handleScroll(projectsRef)}>PROJECTS</li>
           <li onClick={() => handleScroll(contactRef)}>CONTACT</li>
         </ul>
