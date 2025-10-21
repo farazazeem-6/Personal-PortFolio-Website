@@ -1,4 +1,4 @@
-import React from "react";
+import React,{forwardRef} from "react";
 import styles from "../About/About.module.css";
 import aboutImg1 from "../../utils/images/about1.jpg";
 import aboutImg2 from "../../utils/images/about2.jpg";
@@ -7,9 +7,9 @@ import resumeImg from "../../utils/images/resume.png";
 import { Button } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 
-function About() {
+function About(props,ref) {
   return (
-    <div className={styles.aboutContainer}>
+    <div ref={ref} className={styles.aboutContainer}>
       <h1 data-scroll data-scroll-direction="horizontal">
         About Me
       </h1>
@@ -59,4 +59,4 @@ function About() {
   );
 }
 
-export default About;
+export default React.forwardRef(About);

@@ -12,11 +12,17 @@ import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
 import Project from "./pages/Project/Project";
 import Contact from "./pages/Contact/Contact";
+import Footer from "./pages/Footer/Footer";
 const locomotiveScroll = new LocomotiveScroll();
 
 const ThemeContext = createContext();
 
 function App() {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
   const [theme, setTheme] = useState("light");
   function toggleTheme() {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
@@ -46,12 +52,13 @@ function App() {
     <div className={theme}>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <div data-scroll-container ref={scrollRef}>
-          <Header />
-          <Hero />
-          <About />
-          <Skills/>
-          <Project/>
-          <Contact/>
+          <Header scrollRefs={{ homeRef, aboutRef, projectsRef, contactRef }} />
+          <Hero ref={homeRef} />
+          <About ref={aboutRef} />
+          <Skills />
+          <Project ref={projectsRef} />
+          <Contact ref={contactRef} />
+          <Footer />
         </div>
       </ThemeContext.Provider>
     </div>

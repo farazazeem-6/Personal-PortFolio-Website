@@ -1,0 +1,10 @@
+.footerContainer {
+  display: flex;
+  padding: 30px 15% 20px;
+  align-items: center;
+  justify-content: center;
+}
+.footerIcons {
+  display: flex;
+  gap: 30px;
+}

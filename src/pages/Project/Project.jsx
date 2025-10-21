@@ -2,10 +2,11 @@ import styles from "../../pages/Project/Project.module.css";
 import ImageTrailEffect from "../../components/lightswind/image-trail-effect";
 import { InteractiveCard } from "../../components/lightswind/interactive-card";
 import Card from "../../components/Card/Card";
+import React, { forwardRef } from "react";
 
-function Project() {
+function Project(props, ref) {
   return (
-    <div className={styles.projectOuter}>
+    <div ref={ref} className={styles.projectOuter}>
       <ImageTrailEffect
         imageSources={[
           "./src/utils/images/project7.png",
@@ -68,4 +69,4 @@ function Project() {
     </div>
   );
 }
-export default Project;
+export default React.forwardRef(Project);
