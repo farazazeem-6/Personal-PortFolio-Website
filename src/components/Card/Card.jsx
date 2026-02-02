@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../../components/Card/Card.module.css";
 import { Button } from "@mui/material";
 import CallMadeIcon from "@mui/icons-material/CallMade";

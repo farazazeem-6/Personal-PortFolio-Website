@@ -3,7 +3,6 @@ import styles from "../../pages/Contact/Contact.module.css";
 import { Button } from "@mui/material";
 import emailjs from "emailjs-com";
 import Notification from "../../components/Toast_Notification/Notification";
-import { rgba } from "framer-motion";
 
 function Contact(props, ref) {
   const form = useRef();
