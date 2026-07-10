@@ -1,5 +1,3 @@
-import React from "react";
-
 function Notification({ bkColor, propText }) {
   console.log(bkColor);
   console.log(propText);
