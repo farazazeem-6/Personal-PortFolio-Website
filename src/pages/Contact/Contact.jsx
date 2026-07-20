@@ -10,43 +10,30 @@ function Contact(props, ref) {
   const [result, setResult] = useState("");
   const [color, setColor] = useState("");
   const [showToast, setShowToast] = useState(false);
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_hi1re2n";
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_4l20rkn";
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "jnwXsPB_umqpi1SeY";
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+    if (!form.current) return;
     setIsSending(true);
 
-    emailjs
-      .sendForm(
-        "service_hi1re2n", //  EmailJS Service ID
-        "template_4l20rkn", // EmailJS Template ID
-        form.current,
-        "jnwXsPB_umqpi1SeY" // EmailJS Public Key
-      )
-      .then(
-        (result) => {
-        
-          e.target.reset();
-          setResult("✅ Message sent successfully!");
-          setColor("#e8f5e8");
-          setIsSending(false);
-          setShowToast(true);
-
-          setTimeout(() => {
-            setShowToast(false);
-          }, 3000);
-        },
-        (error) => {
-         
-          setResult("❌ Failed to send message, please try again.");
-          setColor("#ffeaea");
-          setIsSending(false);
-
-          setShowToast(true);
-          setTimeout(() => {
-            setShowToast(false);
-          }, 3000);
-        }
-      );
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY);
+      e.target.reset();
+      setResult("✅ Message sent successfully!");
+      setColor("#e8f5e8");
+      setShowToast(true);
+      setIsSending(false);
+      setTimeout(() => setShowToast(false), 3000);
+    } catch (err) {
+      setResult("❌ Failed to send message, please try again.");
+      setColor("#ffeaea");
+      setShowToast(true);
+      setIsSending(false);
+      setTimeout(() => setShowToast(false), 3000);
+    }
   };
   return (
     <div ref={ref} className={styles.contactOuter}>
@@ -76,7 +63,7 @@ function Contact(props, ref) {
         </form>
         {showToast && (
           <div className={styles.toastNotification}>
-            <Notification propText={result} bkColor={color} />
+            <Notification text={result} bgColor={color} />
           </div>
         )}
       </div>
@@ -84,4 +71,4 @@ function Contact(props, ref) {
   );
 }
 
-export default React.forwardRef(Contact);
+export default forwardRef(Contact);
