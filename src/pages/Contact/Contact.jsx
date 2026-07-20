@@ -24,7 +24,7 @@ function Contact(props, ref) {
       )
       .then(
         (result) => {
-          console.log(result.text);
+        
           e.target.reset();
           setResult("✅ Message sent successfully!");
           setColor("#e8f5e8");
@@ -36,7 +36,7 @@ function Contact(props, ref) {
           }, 3000);
         },
         (error) => {
-          console.log(error.text);
+         
           setResult("❌ Failed to send message, please try again.");
           setColor("#ffeaea");
           setIsSending(false);
